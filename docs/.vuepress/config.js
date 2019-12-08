@@ -9,6 +9,7 @@ module.exports = {
     markdown: {
         lineNumbers: true
     },
+    lang: 'zh-CN',
     themeConfig: {
         nav: require('./js/navbar'),
         sidebar: require('./js/sidebar'),
