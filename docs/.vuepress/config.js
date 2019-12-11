@@ -14,7 +14,6 @@ module.exports = {
           lang: 'zh-CN'
         }
     },
-    base:'/docs.github.io/',
     themeConfig: {
         nav: require('./js/navbar'),
         sidebar: require('./js/sidebar'),
