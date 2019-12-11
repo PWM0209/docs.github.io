@@ -11,6 +11,6 @@ features:
 - title: Mr.P
   details: 一个与仙女作伴的迷之男子
 - title: carl & pero
-  details: 。。。一言难尽
+  details: 一言难尽...
 footer: MIT Licensed | Copyright © 2019-present Mr.p & Mrs.L
 ---
