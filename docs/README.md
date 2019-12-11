@@ -7,7 +7,7 @@ tagline: P&L's Notes
 # actionLink: /home/
 features:
 - title: Mrs.L
-  details: 一个集美貌才华于一身的青春美少女
+  details: 一个集美貌才华于一身的女子
 - title: Mr.P
   details: 一个与仙女作伴的迷之男子
 - title: carl & pero
