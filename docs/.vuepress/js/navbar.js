@@ -3,7 +3,7 @@ module.exports = [
         text: 'Home', link: '/home/'
     },
     {
-        text: 'Mr.P', link: '/mr.p/',
+        text: 'Mr.P',
 		items: [
             {
                 text: 'Notes', link: '/mr.p/notes/',
@@ -16,7 +16,7 @@ module.exports = [
         ]
     },
     {
-        text: 'Mrs.L', link: '/mrs.l/',
+        text: 'Mrs.L', 
 		items: [
             {
                 text: 'Notes', link: '/mrs.l/notes/',
