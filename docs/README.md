@@ -7,9 +7,9 @@ tagline: P&L's Notes
 # actionLink: /home/
 features:
 - title: Mrs.L
-  details: 一个集美貌才华于一身的女子.
+  details: UI设计师.
 - title: Mr.P
-  details: 一个与仙女作伴的迷之男子.
+  details: 前端工程师.
 - title: carl & pero
   details: 一言难尽...
 footer: MIT Licensed | Copyright © 2019-present Mr.p & Mrs.L

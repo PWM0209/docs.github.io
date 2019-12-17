@@ -1,4 +1,4 @@
-# Vue.js - Day5 - Webpack
+# Webpack
 
 ## 在网页中会引用哪些常见的静态资源？
 + JS
@@ -42,7 +42,7 @@ webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来
 2. 创建项目基本的目录结构
 3. 使用`cnpm i jquery --save`安装jquery类库
 4. 创建`main.js`并书写各行变色的代码逻辑：
-```
+```javascript
 	// 导入jquery类库
     import $ from 'jquery'
 
@@ -60,7 +60,7 @@ webpack src/js/main.js dist/bundle.js
 ## 使用webpack的配置文件简化打包时候的命令
 1. 在项目根目录中创建`webpack.config.js`
 2. 由于运行webpack命令的时候，webpack需要指定入口文件和输出文件的路径，所以，我们需要在`webpack.config.js`中配置这两个路径：
-```
+```javascript
     // 导入处理路径的模块
     var path = require('path');
 
@@ -90,7 +90,7 @@ webpack src/js/main.js dist/bundle.js
 由于使用`--contentBase`指令的过程比较繁琐，需要指定启动的目录，同时还需要修改index.html中script标签的src属性，所以推荐大家使用`html-webpack-plugin`插件配置启动页面.
 1. 运行`cnpm i html-webpack-plugin --save-dev`安装到开发依赖
 2. 修改`webpack.config.js`配置文件如下：
-```
+```javascript
     // 导入处理路径的模块
     var path = require('path');
     // 导入自动生成HTMl文件的插件
@@ -126,7 +126,7 @@ webpack src/js/main.js dist/bundle.js
 
 ### 方式2：
 1. 修改`webpack.config.js`文件，新增`devServer`节点如下：
-```
+```javascript
 devServer:{
         hot:true,
         open:true,
@@ -134,18 +134,18 @@ devServer:{
     }
 ```
 2. 在头部引入`webpack`模块：
-```
+```javascript
 var webpack = require('webpack');
 ```
 3. 在`plugins`节点下新增：
-```
+```javascript
 new webpack.HotModuleReplacementPlugin()
 ```
 
 ## 使用webpack打包css文件
 1. 运行`cnpm i style-loader css-loader --save-dev`
 2. 修改`webpack.config.js`这个配置文件：
-```
+```javascript
 module: { // 用来配置第三方loader模块的
         rules: [ // 文件的匹配规则
             { test: /\.css$/, use: ['style-loader', 'css-loader'] }//处理css文件的规则
@@ -157,25 +157,25 @@ module: { // 用来配置第三方loader模块的
 ## 使用webpack打包less文件
 1. 运行`cnpm i less-loader less -D`
 2. 修改`webpack.config.js`这个配置文件：
-```
+```javascript
 { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] },
 ```
 
 ## 使用webpack打包sass文件
 1. 运行`cnpm i sass-loader node-sass --save-dev`
 2. 在`webpack.config.js`中添加处理sass文件的loader模块：
-```
+```javascript
 { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] }
 ```
 
 ## 使用webpack处理css中的路径
 1. 运行`cnpm i url-loader file-loader --save-dev`
 2. 在`webpack.config.js`中添加处理url路径的loader模块：
-```
+```javascript
 { test: /\.(png|jpg|gif)$/, use: 'url-loader' }
 ```
 3. 可以通过`limit`指定进行base64编码的图片大小；只有小于指定字节（byte）的图片才会进行base64编码：
-```
+```javascript
 { test: /\.(png|jpg|gif)$/, use: 'url-loader?limit=43960' },
 ```
 
