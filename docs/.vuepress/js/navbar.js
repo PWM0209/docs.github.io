@@ -12,7 +12,7 @@ module.exports = [
                     {text: 'vuepress', link: '/mr.p/vue.js/vuepress'},
                 ]
             },
-            {text: 'Notes', link: '/mr.p/notes/'},
+            {text: 'Notes', link: '/mr.p/notes/Markdown语法'},
         ]
     },
     {
