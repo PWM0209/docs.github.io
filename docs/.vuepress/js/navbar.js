@@ -6,13 +6,13 @@ module.exports = [
         text: 'Mr.P',
 		items: [
             {
-                text: 'Notes', link: '/mr.p/notes/',
+                text: 'Vue',
                 items: [                    
-                    {text: 'vue.js', link: '/mr.p/notes/vue.js/vue'},
-                    {text: 'vuepress', link: '/mr.p/notes/vue.js/vuepress'},
+                    {text: 'vue.js', link: '/mr.p/vue.js/vue'},
+                    {text: 'vuepress', link: '/mr.p/vue.js/vuepress'},
                 ]
             },
-            {text: 'Works', link: '/mr.p/works/'},
+            {text: 'Notes', link: '/mr.p/notes/'},
         ]
     },
     {
@@ -20,10 +20,6 @@ module.exports = [
 		items: [
             {
                 text: 'Notes', link: '/mrs.l/notes/',
-                // items: [                    
-                //     {text: 'vue.js', link: '/mr.p/vue'},
-                //     {text: 'vuepress', link: '/mr.p/vuepress'},
-                // ]
             },
             {text: 'Works', link: '/mrs.l/works/'},
         ]

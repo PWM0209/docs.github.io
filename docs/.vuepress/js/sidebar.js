@@ -1,8 +1,8 @@
 // module.exports =  'auto'
 module.exports = {
-    '/mr.p/notes/vue.js/':[
+    '/mr.p/vue.js/':[
         {
-            title: 'vue',
+            title: 'Vue',
             collapsable: true, 
             children: [
                 'vue',
@@ -16,6 +16,18 @@ module.exports = {
                 'vue/值传递',
                 'vue/组件',
                 'vue/Webpack相关',
+            ]
+        },
+    ],
+    '/mr.p/notes/':[
+        {
+            title: 'Notes',
+            collapsable: true, 
+            children: [
+                // '',
+                'Markdown语法',
+                '正则匹配',
+                '主流浏览器内核',
             ]
         },
     ],
