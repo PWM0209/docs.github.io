@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>正则小结 | 沐糖 (づ｡◕ ౩ ◕｡)づ</title>
+    <meta name="description" content="P&amp;L&#39;s notes site">
+    <link rel="icon" href="/pwm0209/icons/favicon-64.ico">
+    
+    <link rel="preload" href="/pwm0209/assets/css/0.styles.3fdcf07a.css" as="style"><link rel="preload" href="/pwm0209/assets/js/app.2cf937bc.js" as="script"><link rel="preload" href="/pwm0209/assets/js/2.a42f09aa.js" as="script"><link rel="preload" href="/pwm0209/assets/js/11.b6fc6155.js" as="script"><link rel="prefetch" href="/pwm0209/assets/js/10.945848d7.js"><link rel="prefetch" href="/pwm0209/assets/js/12.69f2779a.js"><link rel="prefetch" href="/pwm0209/assets/js/13.c1c4bf3a.js"><link rel="prefetch" href="/pwm0209/assets/js/14.0bf128f1.js"><link rel="prefetch" href="/pwm0209/assets/js/15.a65d1c3d.js"><link rel="prefetch" href="/pwm0209/assets/js/16.93f08c77.js"><link rel="prefetch" href="/pwm0209/assets/js/17.e873ce08.js"><link rel="prefetch" href="/pwm0209/assets/js/18.279e2901.js"><link rel="prefetch" href="/pwm0209/assets/js/19.bf03f4f5.js"><link rel="prefetch" href="/pwm0209/assets/js/20.15d7ec4c.js"><link rel="prefetch" href="/pwm0209/assets/js/21.3e52f5e1.js"><link rel="prefetch" href="/pwm0209/assets/js/22.d670bdc5.js"><link rel="prefetch" href="/pwm0209/assets/js/23.48e6cc72.js"><link rel="prefetch" href="/pwm0209/assets/js/24.77dfca72.js"><link rel="prefetch" href="/pwm0209/assets/js/25.bf32c651.js"><link rel="prefetch" href="/pwm0209/assets/js/26.3cf3b209.js"><link rel="prefetch" href="/pwm0209/assets/js/27.a5351d49.js"><link rel="prefetch" href="/pwm0209/assets/js/28.acfa73c2.js"><link rel="prefetch" href="/pwm0209/assets/js/3.adc7d144.js"><link rel="prefetch" href="/pwm0209/assets/js/4.0273196a.js"><link rel="prefetch" href="/pwm0209/assets/js/5.f3b87aea.js"><link rel="prefetch" href="/pwm0209/assets/js/6.7211a045.js"><link rel="prefetch" href="/pwm0209/assets/js/7.d5a31f30.js"><link rel="prefetch" href="/pwm0209/assets/js/8.959eb0a5.js"><link rel="prefetch" href="/pwm0209/assets/js/9.5c168a09.js">
+    <link rel="stylesheet" href="/pwm0209/assets/css/0.styles.3fdcf07a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/pwm0209/" class="home-link router-link-active"><!----> <span class="site-name">沐糖 (づ｡◕ ౩ ◕｡)づ</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/pwm0209/home/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Mr.P" class="dropdown-title"><span class="title">Mr.P</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Vue</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pwm0209/mr.p/vue.js/vue.html" class="nav-link">vue.js</a></li><li class="dropdown-subitem"><a href="/pwm0209/mr.p/vue.js/vuepress.html" class="nav-link">vuepress</a></li></ul></li><li class="dropdown-item"><!----> <a href="/pwm0209/mr.p/notes/Markdown语法.html" class="nav-link">Notes</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Mrs.L" class="dropdown-title"><span class="title">Mrs.L</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pwm0209/mrs.l/notes/" class="nav-link">Notes</a></li><li class="dropdown-item"><!----> <a href="/pwm0209/mrs.l/works/" class="nav-link">Works</a></li></ul></div></div><div class="nav-item"><a href="/pwm0209/about/" class="nav-link">About</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/pwm0209/home/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Mr.P" class="dropdown-title"><span class="title">Mr.P</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Vue</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pwm0209/mr.p/vue.js/vue.html" class="nav-link">vue.js</a></li><li class="dropdown-subitem"><a href="/pwm0209/mr.p/vue.js/vuepress.html" class="nav-link">vuepress</a></li></ul></li><li class="dropdown-item"><!----> <a href="/pwm0209/mr.p/notes/Markdown语法.html" class="nav-link">Notes</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Mrs.L" class="dropdown-title"><span class="title">Mrs.L</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pwm0209/mrs.l/notes/" class="nav-link">Notes</a></li><li class="dropdown-item"><!----> <a href="/pwm0209/mrs.l/works/" class="nav-link">Works</a></li></ul></div></div><div class="nav-item"><a href="/pwm0209/about/" class="nav-link">About</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Notes</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pwm0209/mr.p/notes/Markdown语法.html" class="sidebar-link">Markdown语法</a></li><li><a href="/pwm0209/mr.p/notes/正则匹配.html" class="active sidebar-link">正则小结</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pwm0209/mr.p/notes/正则匹配.html#示意" class="sidebar-link">示意</a></li><li class="sidebar-sub-header"><a href="/pwm0209/mr.p/notes/正则匹配.html#例子" class="sidebar-link">例子</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pwm0209/mr.p/notes/正则匹配.html#匹配数字" class="sidebar-link">匹配数字</a></li><li class="sidebar-sub-header"><a href="/pwm0209/mr.p/notes/正则匹配.html#校验字符" class="sidebar-link">校验字符</a></li><li class="sidebar-sub-header"><a href="/pwm0209/mr.p/notes/正则匹配.html#特殊需求" class="sidebar-link">特殊需求</a></li></ul></li></ul></li><li><a href="/pwm0209/mr.p/notes/主流浏览器内核.html" class="sidebar-link">五大主流浏览器（按时间顺序）</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="正则小结"><a href="#正则小结" class="header-anchor">#</a> 正则小结</h1> <h2 id="示意"><a href="#示意" class="header-anchor">#</a> 示意</h2> <p>1 <code>\</code>
+斜杠用于转义，在js正则里，只有一些元字符(<code>*,?,.</code>等)和<code>\</code>本身需要转义，其他的不需要转义
+如果其他的字符前面使用了<code>\</code>，可能会产生负面影响，比如<code>\b</code>，<code>\t</code>这些有特殊含义的转义。
+此外，在js正则中，\还有一个用处在于使用<code>new RegExp()</code>形式创建正则对象时
+比如<code>new RegExp('a\*a')</code>,其中<code>*</code>是乘以的意思，js引擎在解析该正则表达式字符串时，会消耗掉这个斜杠
+最后生成的是<code>a*a</code>，这时候我们要这样写<code>'a\\*a'</code>。</p> <p>2 <code>^</code>
+该元字符比较简单，就是表示该正则是从字符串的首字符开始匹配的
+有一个地方需要注意的是，如果该正则表达式加了m标记时，匹配到了行分隔符的时候就会结束
+然后会在下一行继续匹配。
+<code>'d\nd'.match(/^d/g) =&gt; ['d'], 'd\nd'.match(/^d/mg) =&gt; [&quot;d&quot;, &quot;d&quot;]</code></p> <p>3 <code>$</code>
+该元字符和^一样，当含义$的正则匹配一个字符串时，他不是直接判断该字符串的结尾
+而是以行结束符为分隔，对每一行的结尾进行匹配
+<code>'d\nd'.match(/d$/g) =&gt; ['d'], 'd\nd'.match(/d$/mg) = &gt; [&quot;d&quot;, &quot;d&quot;]</code></p> <p>4 <code>* + ?</code>
+这三个元字符代表的是匹配0到多个同样的字符组合
+<code>a*</code>,<code>a?</code>,<code>a+</code>,分别代表匹配0到多个a，0到1个a,1到多个a
+这是一种贪婪的匹配，也就是尽可能多地匹配后面符合条件的字符
+如果在这些元字符后面加上?，那么就代表是非贪婪匹配，也就是尽可能少地匹配
+<code>{n,m}</code>和以上的情况类似，也可以在后面加<code>?</code> <code>'ddd'.match(/d{1,11}/) =&gt; ddd, 'ddd'.match(/d{1,11}?/) =&gt; d</code></p> <p>5 <code>.</code>
+匹配除了行分隔符外的所有字符</p> <p>6 捕获分组<code>(x)</code> <code>\n</code> <code>$n</code> <code>RegExp.$n</code> <code>()</code>代表捕获分组，<code>x</code>代表的表达式所匹配的内容可以在x所有的正则中或者其他地方使用</p> <p><code>/(x)(y)\1\2/.test('xyxy') =&gt; true /(x)(y)\1\2/.test('xyyy') =&gt; false</code> <code>\n</code>代表的是第n个捕获分组的值</p> <p><code>'xy'.replace(/(x)(y)/, &quot;$1 and $2 &quot;) =&gt; x and y, RegExp.$1 = x, RegExp.$2 = y</code>
+每次正则执行完后，捕获分组或挂载到RegExp对象上，并且清除上次执行的结果
+<code>$&amp;</code>是一个特殊的变量，他代表是整个正则表达式匹配到的结果。也就是xy</p> <p>7 <code>(?:x)</code>
+非捕获分组，也就是()中的表达式捕获到分组不可在其他地方使用
+<code>'x'.replace(/(?:x)/, &quot;$1&quot;) =&gt; &quot;$1&quot;</code></p> <p>8 <code>x(?=y)</code>
+前向断言，断言x后面是y,但y不在捕获分组中
+<code>'x'.match(/x(?=y+)/) =&gt; null, 'xyy'.match(/x(?=y+)/) =&gt; x</code></p> <p>9 <code>x(?!y)</code>
+同上，断言x后面不是y。</p> <p>10 <code>[\b]</code>
+匹配(U+0008)，键盘中的退格键。</p> <p>11 <code>\b</code>
+匹配单词的边界，如果匹配成功，匹配到内容的结果长度为0
+单词边界的定义为，某一个位置，后面或者前面没有单词字符，则是单词边界
+其中单词字符的定义为<code>大小写字母</code>+<code>数字</code>+<code>_</code>
+其余的都为非单词字符
+<code>/a\b/.test('a~b') =&gt; true</code>,<code>~</code>被视为单词边界。<code>/a\b/.test('ab') =&gt; false</code></p> <p>12 <code>\B</code>
+分单词边界，定义类似<code>\b</code>。<code>/a\B/.test('ab') =&gt; true, /b\B/.test('ab') =&gt; false</code>
+b的后面是''，属于单词边界，所以是false</p> <p>13 <code>\w</code>
+单词字符，定义为<code>[A-Za-z0-9_]</code></p> <p>14 <code>\W</code>
+非单词字符，定义为<code>[^A-Za-z0-9_]</code></p> <p>15 <code>\s</code>
+所有空格，如制表符、垂直分隔符、水平分隔符，定义为:
+<code>[ \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code></p> <p>16 <code>\S</code>
+非空格符，定义为:
+<code>[^ \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code></p> <p>17 sticky
+粘着位类似于全局匹配，当我们使用exec函数时，如果正则表达式中加了g
+那么就会下次执行exec函数时就会从上次匹配的结束位置开始
+同样，我们可以通过加y标记来达到这个目的</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token regex">/a/</span><span class="token punctuation">;</span> x<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token string">'aa'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> x<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token string">'aa'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// lastIndex为上次匹配的位置，lastIndex为不会变，每次都匹配到第一个a</span>
+<span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token regex">/a/g</span><span class="token punctuation">;</span> x<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token string">'aa'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> x<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token string">'aa'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment">// lastIndex会变，第n次匹配会匹配到第n个a</span>
+<span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token regex">/a/y</span><span class="token punctuation">;</span> x<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token string">'aa'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> x<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token string">'aa'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment">// lastIndex会变，第n次匹配会匹配到第n个a,粘着位其实就是说上次匹配的位置会粘着（记着）</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>18 使用<code>new RegExp()</code>
+动态生成正则时需要使用这种方式，但是需要对输入进行转义。需要对元字符进行修正，$&amp;为每次匹配到的字符</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">fix</span><span class="token punctuation">(</span><span class="token parameter">str</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/[.*+?^${}()|[\]\\]/g</span><span class="token punctuation">,</span> <span class="token string">'\\$&amp;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="例子"><a href="#例子" class="header-anchor">#</a> 例子</h2> <h3 id="匹配数字"><a href="#匹配数字" class="header-anchor">#</a> 匹配数字</h3> <p>1 数字：
+<code>^[0-9]*$</code></p> <p>2 n位的数字：
+<code>^\d{n}$</code></p> <p>3 至少n位的数字：
+<code>^\d{n,}$</code></p> <p>4 m-n位的数字：
+<code>^\d{m,n}$</code></p> <p>5 零和非零开头的数字：
+<code>^(0|[1-9][0-9]*)$</code></p> <p>6 非零开头的最多带两位小数的数字：
+<code>^([1-9][0-9]*)+(.[0-9]{1,2})?$</code></p> <p>7 带1-2位小数的正数或负数：
+<code>^(\-)?\d+(\.\d{1,2})?$</code></p> <p>8 正数、负数、和小数：
+<code>^(\-|\+)?\d+(\.\d+)?$</code></p> <p>9 有两位小数的正实数：
+<code>^[0-9]+(.[0-9]{2})?$</code></p> <p>10 有1~3位小数的正实数：
+<code>^[0-9]+(.[0-9]{1,3})?$</code></p> <p>11 非零的正整数：
+<code>^[1-9]\d*$ 或 ^([1-9][0-9]*){1,3}$ 或 ^\+?[1-9][0-9]*$</code></p> <p>12 非零的负整数：
+<code>^\-[1-9][]0-9&quot;*$ 或 ^-[1-9]\d*$</code></p> <p>13 非负整数：
+<code>^\d+$ 或 ^[1-9]\d*|0$</code></p> <p>14 非正整数：
+<code>^-[1-9]\d*|0$ 或 ^((-\d+)|(0+))$</code></p> <p>15 非负浮点数：
+<code>^\d+(\.\d+)?$ 或 ^[1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0$</code></p> <p>16 非正浮点数：
+<code>^((-\d+(\.\d+)?)|(0+(\.0+)?))$ 或 ^(-([1-9]\d*\.\d*|0\.\d*[1-9]\d*))|0?\.0+|0$</code></p> <p>17 正浮点数：
+<code>^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$ 或 ^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$</code></p> <p>18 负浮点数：
+<code>^-([1-9]\d*\.\d*|0\.\d*[1-9]\d*)$ 或 ^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$</code></p> <p>19 浮点数：
+<code>^(-?\d+)(\.\d+)?$ 或 ^-?([1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0)$</code></p> <h3 id="校验字符"><a href="#校验字符" class="header-anchor">#</a> 校验字符</h3> <p>1 汉字：
+<code>^[\u4e00-\u9fa5]{0,}$</code></p> <p>2 英文和数字：
+<code>^[A-Za-z0-9]+$</code> 或 <code>^[A-Za-z0-9]{4,40}$</code></p> <p>3 长度为3-20的所有字符：
+<code>^.{3,20}$</code></p> <p>4 由26个英文字母组成的字符串：
+<code>^[A-Za-z]+$</code></p> <p>5 由26个大写英文字母组成的字符串：
+<code>^[A-Z]+$</code></p> <p>6 由26个小写英文字母组成的字符串：
+<code>^[a-z]+$</code></p> <p>7 由数字和26个英文字母组成的字符串：
+<code>^[A-Za-z0-9]+$</code></p> <p>8 由数字、26个英文字母或者下划线组成的字符串：
+<code>^\w+$ 或 ^\w{3,20}$</code></p> <p>9 中文、英文、数字包括下划线：
+<code>^[\u4E00-\u9FA5A-Za-z0-9_]+$</code></p> <p>10 中文、英文、数字但不包括下划线等符号：
+<code>^[\u4E00-\u9FA5A-Za-z0-9]+$ 或 ^[\u4E00-\u9FA5A-Za-z0-9]{2,20}$</code></p> <p>11 可以输入含有^%&amp;',;=?$&quot;等字符：
+<code>[^%&amp;',;=?$\x22]+</code></p> <p>12 禁止输入含有~的字符：
+<code>[^~\x22]+</code></p> <h3 id="特殊需求"><a href="#特殊需求" class="header-anchor">#</a> 特殊需求</h3> <p>1 Email地址：
+<code>^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$</code></p> <p>2 域名：
+<code>[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?</code></p> <p>3 InternetURL：
+<code>[a-zA-z]+://[^\s]* 或 ^http://([\w-]+\.)+[\w-]+(/[\w-./?%&amp;=]*)?$</code></p> <p>4 手机号码最新：
+<code>^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(17[0,3,5-8])|(18[0-9])|166|198|199|(147))\d{8}$</code></p> <p>5 电话号码(&quot;XXX-XXXXXXX&quot;、&quot;XXXX-XXXXXXXX&quot;、&quot;XXX-XXXXXXX&quot;、&quot;XXX-XXXXXXXX&quot;、&quot;XXXXXXX&quot;和&quot;XXXXXXXX)：
+<code>^(\(\d{3,4}-)|\d{3.4}-)?\d{7,8}$</code></p> <p>6 国内电话号码(0511-4405222、021-87888822)：
+<code>\d{3}-\d{8}|\d{4}-\d{7}</code></p> <p>7 身份证号(15位、18位数字)：
+<code>^\d{15}|\d{18}$</code></p> <p>8 短身份证号码(数字、字母x结尾)：
+<code>^([0-9]){7,18}(x|X)?$ 或 ^\d{8,18}|[0-9x]{8,18}|[0-9X]{8,18}?$</code></p> <p>9 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：
+<code>^[a-zA-Z][a-zA-Z0-9_]{4,15}$</code></p> <p>10 密码(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)：
+<code>^[a-zA-Z]\w{5,17}$</code></p> <p>11 强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间)：
+<code>^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$</code></p> <p>12 日期格式：
+<code>^\d{4}-\d{1,2}-\d{1,2}</code></p> <p>13 一年的12个月(01～09和1～12)：
+<code>^(0?[1-9]|1[0-2])$</code></p> <p>14 一个月的31天(01～09和1～31)：
+<code>^((0?[1-9])|((1|2)[0-9])|30|31)$</code></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2019-12-19 1:03:12 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pwm0209/mr.p/notes/Markdown语法.html" class="prev">Markdown语法</a></span> <span class="next"><a href="/pwm0209/mr.p/notes/主流浏览器内核.html">五大主流浏览器（按时间顺序）</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/pwm0209/assets/js/app.2cf937bc.js" defer></script><script src="/pwm0209/assets/js/2.a42f09aa.js" defer></script><script src="/pwm0209/assets/js/11.b6fc6155.js" defer></script>
+  </body>
+</html>
